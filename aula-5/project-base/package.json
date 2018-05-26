@@ -1,20 +1,15 @@
 {
-  "name": "node-test-project",
+  "name": "koodo",
   "version": "1.0.0",
-  "description": "A initial node test project",
-  "main": "src/app.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon src/app.js",
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "test",
-    "node"
-  ],
-  "author": "mirandatf",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "pug": "^2.0.3"
   },

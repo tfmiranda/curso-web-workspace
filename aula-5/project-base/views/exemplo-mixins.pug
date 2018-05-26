@@ -1,0 +1,40 @@
+extends layout
+
+include mixins/_input
+include mixins/_select
+
+block content
+  +input({
+    id: 'nome', 
+    label: 'Nome',
+    placeholder: 'Digite seu nome',
+  })
+
+  +input({
+    id: 'email', 
+    label: 'Email',
+    placeholder: 'Digite seu email',
+    type: 'email',
+    value: 'tibuurcio@gmail.com',
+    help: 'O email deve conter um `@`'
+  })
+
+  +input({
+    id: 'idade', 
+    label: 'Idade',
+    placeholder: 'Digite sua idade',
+    value: 'number'
+  })
+
+  +select({
+    id: 'cidade', 
+    label: 'Escolha sua cidade', 
+    options: ['Natal', 'Parnamirim', 'Macaíba'], 
+  })
+
+  +select({
+    id: 'cidade', 
+    label: 'Escolha sua cidade', 
+    options: ['Natal', 'Parnamirim', 'Macaíba'],
+    value: 'Natal'
+  })

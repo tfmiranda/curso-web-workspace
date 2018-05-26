@@ -1,0 +1,10 @@
+mixin input({ id, label, type = 'text', placeholder, value = '', help })
+  .form-group
+    label(for=id) #{label}
+    input.form-control(id=id, type=type, placeholder=placeholder)
+    if help
+      small.form-text.text-muted #{help}
+    ul.list-group
+      if listaSugestoes
+        for sugestao in listaSugestoes
+          li.list-group-item #{sugestao}

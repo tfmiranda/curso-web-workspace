@@ -1,0 +1,10 @@
+mixin select({ id, label, options, value, multiple = false })
+  .form-group
+    label(for=id) #{label}
+    select.form-control(id=id, multiple=multiple)
+      option Nenhuma
+      for option in options
+        if value === option
+          option(selected) #{option}
+        else
+          option #{option}

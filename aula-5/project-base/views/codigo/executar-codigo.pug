@@ -1,0 +1,19 @@
+extends ../layout
+
+block styles
+    script(rel='stylesheet' href='vendors/codemirror.css')
+
+block content
+    .row
+        .col
+            .form-group
+                label(for='codigo') Digite seu código
+                textarea.form-control(name='codigo' rows='3')
+            button.btn.btn-primary(type='button' id='btn-executar') Executar
+        .col
+            p Resultado:
+            pre(name='resultado')
+
+block scripts
+    script(src='vendors/codemirror.js')
+    script(src='js/executar-codigo.js')

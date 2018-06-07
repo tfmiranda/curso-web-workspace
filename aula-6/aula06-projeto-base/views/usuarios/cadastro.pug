@@ -1,0 +1,48 @@
+extends ../layout
+
+include ../mixins/_input
+include ../mixins/_select
+
+block content
+  form(action="", method="POST")
+    +input({
+      id: 'nome',
+      label: 'Nome',
+      placeholder: 'Digite seu nome',
+      name: 'nome'
+    })
+
+    +input({
+      id: 'sobrenome',
+      label: 'Sobrenome',
+      placeholder: 'Digite seu sobrenome',
+      name: 'sobrenome'
+    })
+
+    +input({
+      id: 'email',
+      label: 'Email',
+      placeholder: 'Digite seu email',
+      type: 'email',
+      value: 'tibuurcio@gmail.com',
+      help: 'O email deve conter um `@`',
+      name: 'email'
+    })
+
+    +input({
+      id: 'senha',
+      type: 'password',
+      label: 'Senha',
+      placeholder: 'Digite sua senha',
+      name: 'senha'
+    })
+
+    +input({
+      id: 'senha2',
+      type: 'password',
+      label: 'Confirmação de senha',
+      placeholder: 'Digite sua senha novamente',
+      name: 'senha2'
+    })
+
+    button.btn.btn-primary(type="submit") Enviar

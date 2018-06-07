@@ -1,0 +1,41 @@
+extends ../layout
+
+block content
+  a.btn.btn-primary.mb-2(href='usuarios/cadastro') Cadastrar usuário
+  table.table.table-hover.table-bordered.table-striped.table-sm
+    thead
+      tr
+        th Nome
+        th Email
+        th Ações
+    tbody
+      tr
+        td Gabriel
+        td tibuurcio@gmail.com
+        td 
+          a(href='/usuarios/0')
+            span.badge.badge-primary Editar
+          | 
+          a(href='/usuarios/0')
+            span.badge.badge-danger Remover
+      tr
+        td Lucas
+        td dasilva@gmail.com
+        td 
+          a(href='/usuarios/0')
+            span.badge.badge-primary Editar
+          | 
+          a(href='/usuarios/0')
+            span.badge.badge-danger Remover
+      tr
+        td João
+        td neto@gmail.com
+        td 
+          a(href='/usuarios/0')
+            span.badge.badge-primary Editar
+          | 
+          a(href='/usuarios/0')
+            span.badge.badge-danger Remover
+
+block scripts
+  script(src='js/usuarios/crud.js')

@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  a.btn.btn-primary.mb-2(href='/usuarios/cadastro') Cadastrar usuário
+  table.table.table-hover.table-bordered.table-striped.table-sm
+    thead
+      tr
+        th Nome
+        th Email
+        th Ações
+    tbody
+      for usuario in usuarios
+        tr
+          td #{usuario.nome} #{usuario.sobrenome}
+          td #{usuario.email}
+          td 
+            a(href=`/usuarios/cadastro/${usuario.id}`)
+              span.badge.badge-primary Editar
+            | 
+            a(href='#')
+              span(name='btn-remover', data-id=usuario.id).badge.badge-danger Remover
+
+block scripts
+  script(src='js/usuarios/crud.js')

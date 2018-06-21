@@ -1,0 +1,22 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Signin Template for Bootstrap
+    // Bootstrap core CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+    // Custom styles for this template
+    link(href="css/login.css", rel="stylesheet")
+  body.text-center
+    form.form-signin
+      img.mb-4(src='imagens/github-logo.png', alt='', width='72', height='72')
+      h1.h3.mb-3.font-weight-normal Login
+      label.sr-only(for='inputEmail') Email
+      input#inputEmail.form-control(type='email', name='email', placeholder='Digite seu email', required, autofocus)
+      label.sr-only(for='inputPassword') Senha
+      input#inputPassword.form-control(type='password', name='senha', placeholder='Digite sua senha', required)
+      button.btn.btn-lg.btn-primary.btn-block(type='submit') Entrar
+      p.mt-5.mb-3.text-muted © Curso - Desenvolvimento Web com Javascript 2018

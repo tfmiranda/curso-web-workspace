@@ -1,0 +1,11 @@
+//- Mixin model  for futures mixins
+mixin input({ id, label, type = 'text', placeholder, value = '', name, help })
+  .form-group
+    label(for=id) #{label}
+    input.form-control(id=id, type=type, placeholder=placeholder, name=name, value=value)
+    if help
+      small.form-text.text-muted #{help}
+    ul.list-group
+      if listaSugestoes
+        for sugestao in listaSugestoes
+          li.list-group-item #{sugestao}

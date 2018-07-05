@@ -1,0 +1,25 @@
+extends layout
+
+include mixins/_input
+include mixins/_comentario
+
+block content
+  .row
+    .col-sm-12
+      h2 Comentários
+  .row
+    for comentario in comentarios
+      +comentario(comentario)
+
+  form.mt-5(method="POST")
+    input(hidden, name='autor', value=user.id)
+
+    .form-group
+      label.label(for='comentario') Novo comentário
+      textarea.form-control(id='comentario', name='texto', rows='3', placeholder='Digite seu comentário')
+
+    button.btn.btn-primary(type="submit") Enviar
+
+block styles
+  link(rel='stylesheet' href='css/comentarios.css')
+

@@ -1,0 +1,29 @@
+.card > .card-header:after,
+.card > .card-header:before {
+  position: absolute;
+  top: 16px;
+  left: -16px;
+  display: block;
+  content: ' ';
+  border-color: transparent;
+  border-style: solid solid outset;
+  pointer-events: none;
+}
+.card > .card-header:after {
+  border-width: 7px;
+  border-right-color: #f7f7f7;
+  margin-top: 1px;
+  margin-left: 2px;
+}
+.card > .card-header:before {
+  border-right-color: #ddd;
+  border-width: 8px;
+}
+
+.card > .card-header {
+  padding: 0.5rem 1.25rem;
+}
+
+.card > .card-footer {
+  padding: 0.5rem 1.25rem;
+}

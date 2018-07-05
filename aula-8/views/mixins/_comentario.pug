@@ -1,0 +1,14 @@
+mixin comentario({ autor, dataCriacao, texto, likes })
+  .col-sm-1
+    img.img-thumbnail.user-photo(src=autor.gravatar)
+  .col-sm-5
+    .card.mb-3
+      .card-header
+        span.text-muted #{h.tempoDesde(dataCriacao)} atrás
+      .card-body
+        p.card-text #{texto}
+      .card-footer.text-muted
+        button.btn.btn-outline-primary.btn-sm(name='btn_favoritar')
+          i.far.fa-thumbs-up
+          |  
+          span(name='btn_favoritar_likes') #{likes}

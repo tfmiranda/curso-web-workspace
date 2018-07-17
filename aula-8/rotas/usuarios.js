@@ -5,7 +5,7 @@ const { mesmoUsuarioAutenticado } = require('../controladores/authController');
 
 // Definição de rotas
 router.get('/', usuarioController.listarUsuarios);
-router.get('/:id', mesmoUsuarioAutenticado, usuarioController.visualizarUsuario);
+// router.get('/:id', mesmoUsuarioAutenticado, usuarioController.visualizarUsuario);
 router.get('/cadastro', (req, res) => res.render('usuarios/cadastro'));
 router.get('/cadastro/:id', mesmoUsuarioAutenticado, usuarioController.editandoUsuario);
 router.post('/cadastro', usuarioController.cadastrarUsuario);

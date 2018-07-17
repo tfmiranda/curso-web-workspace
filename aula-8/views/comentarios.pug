@@ -4,6 +4,7 @@ include mixins/_input
 include mixins/_comentario
 
 block content
+  span #{JSON.stringify(comentarios,null,' ')}  
   .row
     .col-sm-12
       h2 Comentários

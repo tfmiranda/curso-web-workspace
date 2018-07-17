@@ -12,13 +12,13 @@ const comentarioSchema = Schema({
     default: Date.now
   },
   likes: {
-    type: Number,
-    default: 0
+    type: [String],
+    default: []
   },
   removido: {
     type: Boolean,
     default: false
-  }
+  }  
 });
 
 module.exports = comentarioSchema;

@@ -1,4 +1,4 @@
-exports.isLogado = function(req, res, next) {
+exports.isLogado = function (req, res, next) {
   if (req.isAuthenticated()) {
     next();
   } else {
@@ -7,8 +7,16 @@ exports.isLogado = function(req, res, next) {
   }
 };
 
-exports.mesmoUsuarioAutenticado = function(req, res, next) {
-  if (req.user.admin || req.user.id === req.params.id) {
+exports.mesmoUsuarioAutenticado = function (req, res, next) {
+  console.log(req.params.id);
+  let pass = false;
+  if (req.user != null) {
+    if (req.user.admin || req.user.id === req.params.id) {
+      pass = true;
+    }
+  }
+
+  if (pass) {
     next();
   } else {
     req.flash('warning', 'Oops, você não tem permissão para visualizar essa página');
